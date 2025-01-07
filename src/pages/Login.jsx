@@ -18,7 +18,7 @@ const Login = () => {
     event.preventDefault();
     try {
       if (state === "Admin") {
-        const { data } = await axios.post(backendUrl + "/api/admin/login", {
+        const { data } = await axios.post("https://doctor-appointment-backend-wi3l.onrender.com" + "/api/admin/login", {
           email,
           password,
         });
@@ -30,7 +30,7 @@ const Login = () => {
           toast.error(data.message);
         }
       } else {
-        const { data } = await axios.post(backendUrl + "/api/doctor/login", {
+        const { data } = await axios.post("https://doctor-appointment-backend-wi3l.onrender.com" + "/api/doctor/login", {
           email,
           password,
         });
