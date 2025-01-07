@@ -12,7 +12,7 @@ const AdminContextProvider = (props) => {
     const [appointments, setAppointments] = useState([])
     const [dashData, setDashData] = useState(false)
 
-    const backendUrl = "http://localhost:4000";
+    const backendUrl = "https://doctor-appointment-backend-wi3l.onrender.com";
 
     const getAllDoctors = async (req, res) => {
         try {
